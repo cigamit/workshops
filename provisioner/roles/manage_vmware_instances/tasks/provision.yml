@@ -1,0 +1,9 @@
+- name: save private key
+  file:
+    path: "{{ playbook_dir }}/{{ec2_name_prefix}}/"
+    state: directory
+
+
+## Instance creation
+- name: provision workshop instances
+  include_tasks: 'instances_{{ workshop_type }}.yml'

@@ -1,0 +1,24 @@
+---
+#- name: RHEL mode - setup inventory
+#  include_tasks: "addhost_rhel.yml"
+#  when: workshop_type == 'rhel'
+#
+#- name: networking mode - setup inventory
+#  include_tasks: "addhost_networking.yml"
+#  when: workshop_type == 'networking'
+#
+#- name: f5 mode - setup inventory
+#  include_tasks: "addhost_f5.yml"
+#  when: workshop_type == 'f5'
+#
+#- name: DevOps mode - setup inventory
+#  include_tasks: "addhost_devops.yml"
+#  when: workshop_type == 'devops'
+#
+#- name: security mode - setup inventory
+#  include_tasks: "addhost_security.yml"
+#  when: workshop_type == 'security'
+
+- name: windows mode - setup inventory
+  include_tasks: "addhost_windows.yml"
+  when: workshop_type == 'windows'

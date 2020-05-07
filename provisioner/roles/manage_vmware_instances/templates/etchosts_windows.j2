@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+
+{% for vm in hostvars %}
+{% if hostvars[vm].ansible_host is defined %}
+{{ hostvars[vm].ansible_host }} {{ hostvars[vm].short_name }}
+{% endif %}
+{% endfor %}
